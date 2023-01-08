@@ -29,6 +29,14 @@
 // const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 // console.log(total);
 const jonas = {
+  name: "jonas",
+  hasDriver: false,
+  year: 1991,
   friends: ["micheal", "jim", "dwight"],
+  msg: function () {
+    this.age = 2023 - this.year;
+    this.driverl = this.hasDriver ? "a driver lisense" : "no driver lisense";
+    return `${this.name} is ${this.age} years old and has ${this.driverl}`;
+  },
 };
-console.log(jonas.friends[0]);
+console.log(jonas.msg());
