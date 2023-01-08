@@ -28,15 +28,42 @@
 // console.log(tips);
 // const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 // console.log(total);
-const jonas = {
-  name: "jonas",
-  hasDriver: false,
-  year: 1991,
-  friends: ["micheal", "jim", "dwight"],
-  msg: function () {
-    this.age = 2023 - this.year;
-    this.driverl = this.hasDriver ? "a driver lisense" : "no driver lisense";
-    return `${this.name} is ${this.age} years old and has ${this.driverl}`;
+// const jonas = {
+//   name: "jonas",
+//   hasDriver: false,
+//   year: 1991,
+//   friends: ["micheal", "jim", "dwight"],
+//   msg: function () {
+//     this.age = 2023 - this.year;
+//     this.driverl = this.hasDriver ? "a driver lisense" : "no driver lisense";
+//     return `${this.name} is ${this.age} years old and has ${this.driverl}`;
+//   },
+// };
+// console.log(jonas.msg());
+const Mark = {
+  name: "Mark",
+  weight: 78,
+  height: 1.69,
+  calBmi: function () {
+    this.bmi = this.weight / (this.height * this.height);
+    return this.bmi;
   },
 };
-console.log(jonas.msg());
+const John = {
+  name: "John",
+  weight: 92,
+  height: 1.95,
+  calBmi: function () {
+    this.bmi = this.weight / (this.height * this.height);
+    return this.bmi;
+  },
+};
+if (Mark.calBmi() > John.calBmi()) {
+  console.log(
+    `${Mark.name} (${Mark.bmi})  has higher BMI than ${John.name}(${John.bmi})`
+  );
+} else {
+  console.log(
+    `${John.name} (${John.bmi})  has higher BMI than ${Mark.name}(${Mark.bmi})`
+  );
+}
